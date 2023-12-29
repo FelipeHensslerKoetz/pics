@@ -1,5 +1,5 @@
+import "./SearchBar.css";
 import { useState } from "react";
-import searchImages from "../api";
 
 function SearchBar({ onSubmit }) {
   const [term, setTerm] = useState("");
@@ -14,8 +14,9 @@ function SearchBar({ onSubmit }) {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
+        <label>Enter a search term</label>
         <input value={term} onChange={handleChange} />
       </form>
     </div>
